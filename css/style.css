@@ -1,0 +1,53 @@
+textarea {
+    resize: none; /* уюираем расширитель и задаем высоту и широту */
+    resize: vertical; /*Только вниз расширение*/
+}
+input[type='checkbox']{
+    display: none;
+}
+.checkbox{
+    position: relative;
+    padding-left: 30px;
+}
+.checkbox::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    border: 1px solid salmon;
+}
+input[type='checkbox']:checked + .checkbox:before{
+    background-color: brown;
+} /*делает активным клик по тексту "как галочка"*/
+
+input[type='checkbox']:checked + .checkbox__icon{
+    background-color: brown;
+}
+input:valid{
+    border-color: blue;
+}
+input:invalid{
+    border: 1px solid red;
+}
+input:valid + span { /*чтобы сделать галочку и крестик в домашке*/
+    border: 1px solid lightcyan;
+}
+
+input:focus{
+    box-shadow: 10px 10px 10px 10px #000;
+}
+input:focus:valid{
+    border: 10px solid green; /*для домашки*/
+}
+input:focus:invalid{
+    border: 10px solid red; /*для домашки*/
+}
+body{
+    font-family: "Roboto", sans-serif;
+}
+.fa-solid{
+    font-size: 100px;
+    color: rgb(69, 41, 21);
+}

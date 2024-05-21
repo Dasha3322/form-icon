@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form action="mail.php" method="post">
+        <input type="text">
+        <!-- атрибут name и email дают возможность увидеть варианты, которые уже применялись -->
+        <input type="email"> <!--проверка @ -->
+        <input type="password">
+        <!-- Пишет кружками -->
+        <input type="button" value="кнопка">
+        <!-- атрибут value похволяет заполнить тектом кнопку, обнуляем бордер, аутлайн (стили)-->
+        <input type="submit" value="отправить">
+        <!-- отвечает за отправку -->
+        <input type="checkbox">
+        <!-- галочка -->
+        <input type="radio" name="radio">
+        <!-- круглая кнопка для выбора одного из вариантов, используется в комбинации
+        атрибут name, два таких импута дают два круга выбора и т.д. -->
+        <input type="reset" value="очистить форму">
+        <!-- очищает информацию ыыеденную в предыд импутах -->
+        <input type="hidden">
+        <!-- не виден на странице, чтобы пользователь не заполнял форму, но информация нужная передавалась -->
+        <input type="file" multiple accept=".jpg,.png">
+        <!-- выбор файла с компа
+        multiple несколько файлов для загрузки
+        accept через запятую перечисляются форматы-->
+        <input type="range">
+        <!-- ползунок, не можем стилизовать -->
+        <input type="date">
+        <!-- введение даты -->
+        <input type="time">
+        <input type="color">
+        <input required name="name" type="text">
+        
+        <textarea placeholder="введите комментарий"></textarea> 
+        <!-- тектовое поле
+        атрибут placeholder и  у input - посказка что вводить в поле 
+        внутри тега не пишем ничего-->
+
+        <select>
+            <option value="настройка 1">название опции</option>
+            <!-- в value вписываем что отправляется -->
+            <option selected value="настройка 1">название опции</option> 
+            <!-- выбор по умолчанию-->
+            <option disabled value="настройка 1">название опции</option>
+            <!-- выриант который нельзя выбрать -->
+            <optgroup label="Группа 1">
+                <option value="настройка 1">название опции</option>
+                <option selected value="настройка 1">название опции</option> 
+                <option disabled value="настройка 1">название опции</option>
+            </optgroup>
+        </select>
+        <!-- выпадающий список -->
+        <button type="button">
+            кнопка
+        </button>
+        <button type="submit"> <!--если баттон в форм то он всегда сабмит-->
+            кнопка
+        </button>
+        <button type="reset">
+            кнопка
+        </button>
+        <a href="#">
+            кнопка
+        </a>
+
+        <label for="name"><!-- текстовая подсказка -->
+            введите имя
+        </label>
+        <input id="name" type="text">
+
+        <label>
+            <input type="checkbox">
+            Я согласен
+        </label>
+        <!-- при клике на текст ставится галочка, это в связи с тем, что внутри лейбла -->
+
+        <input type="checkbox" name="" id="check" checked>
+        <label for="check"> тык</label>
+
+        
+        <label>
+            <input type="checkbox">
+            <span class="checkbox">
+                Я согласен
+            </span>
+        </label>
+
+        <label>
+            <input type="checkbox">
+            <span class="checkbox">
+                <span class="checkbox__icon"></span>
+                <span class="checkbox__text">Я согласен</span>
+            </span>
+        </label>
+
+
+        
+    </form>
+    <i class="fa-solid fa-poo"></i>
+    <i class="fa-solid fa-poo"></i>
+    <i class="fa-solid fa-poo"></i>
+    <i class="fa-solid fa-poo"></i>
+    <i class="fa-solid fa-poo"></i>
+</body>
+</html>
